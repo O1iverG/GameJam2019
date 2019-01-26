@@ -7,6 +7,16 @@ public class Grid : MonoBehaviour
     [SerializeField]
     private float size = 1f;
 
+    public GameObject tile;
+    public float gridPositionX;
+    public float gridPositionY;
+    public float gridPositionZ;
+
+    private void Start()
+    {
+        CreateLevel();
+    }
+
     public Vector3 GetNearestPointOnGrid(Vector3 position)
     {
         position -= transform.position;
@@ -26,15 +36,16 @@ public class Grid : MonoBehaviour
         return result;
     }
 
-    private void OnDrawGizmos()
+    void CreateLevel()
     {
-        Gizmos.color = Color.blue;
-        for (float x = 0; x < 40; x += size)
+        for (float x = 0; x < 5; x += size)
         {
-            for (float z = 0; z < 40; z += size)
+            for (float z = 0; z < 5; z += size)
             {
-                var point = GetNearestPointOnGrid(new Vector3(x, 0f, z));
-                Gizmos.DrawSphere(point, 0.1f);
+                float xPosition = x + gridPositionX;
+                float yPosition = gridPositionY;
+                float zPosition = z + gridPositionZ;
+                Instantiate(tile, new Vector3(xPosition, yPosition, zPosition), Quaternion.identity);
             }
         }
     }

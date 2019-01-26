@@ -66,8 +66,10 @@
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemySpawn.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
+    <Compile Include="Assets\Scripts\SnupuBattle.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
-    <Compile Include="Assets\WallDefense.cs" />
+    <Compile Include="Assets\Scripts\TilePlacement.cs" />
+    <Compile Include="Assets\Scripts\WallDefense.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/cpt2olg/Documents/Unity Project/Game Jam 2019 HD/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
