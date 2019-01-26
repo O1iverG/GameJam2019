@@ -60,8 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyMovement.cs" />
-    <Compile Include="Assets\EnemyMovementTopLeft.cs" />
+    <Compile Include="Assets\Scripts\DefenseBattle.cs" />
+    <Compile Include="Assets\Scripts\DefensePlacer.cs" />
+    <Compile Include="Assets\Scripts\EnemyBattle.cs" />
+    <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+    <Compile Include="Assets\Scripts\Grid.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\WallDefense.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/cpt2olg/Documents/Unity Project/Game Jam 2019 HD/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
