@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\GridCell.cs" />
     <Compile Include="Assets\Scripts\DefenseBattle.cs" />
     <Compile Include="Assets\Scripts\DefensePlacer.cs" />
     <Compile Include="Assets\Scripts\EnemyBattle.cs" />

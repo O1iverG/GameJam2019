@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class DefensePlacer : MonoBehaviour
 {
-    private Grid grid;
     public GameObject defense;
+    private Grid gridLayout;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        grid = FindObjectOfType<Grid>();
+        gridLayout = transform.parent.GetComponent<Grid>();
     }
 
     // Update is called once per frame
@@ -29,8 +29,13 @@ public class DefensePlacer : MonoBehaviour
 
     private void PlaceDefenseNear(Vector3 clickPoint)
     {
-        var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
-        GameObject cube = Instantiate(defense, finalPosition, Quaternion.identity);
+        Debug.Log("Click here");
+        Debug.Log(clickPoint); 
+        var finalPosition = gridLayout.LocalToCell(new Vector3(clickPoint[0], clickPoint[1], 0));
+        var finaPo = gridLayout.CellToLocal(finalPosition);
+        Debug.Log(finalPosition);
+        Debug.Log(finaPo);
+        GameObject cube = Instantiate(defense, finaPo, Quaternion.identity);
         cube.transform.localScale = new Vector3(4, 4, 4);
     }
 
