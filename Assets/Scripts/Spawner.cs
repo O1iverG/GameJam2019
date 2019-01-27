@@ -40,7 +40,7 @@ public class Spawner : MonoBehaviour
     public float timeBetweenEnemies = 1.0f;
     private float timeTillEnemy = 0.0f;
     //Wave controls
-    public int wavesPerRound = 5;
+    public int wavesPerRound = 20;
     private int numWaves = 0;
 
     void Start()
@@ -50,7 +50,7 @@ public class Spawner : MonoBehaviour
         Enemies.Add(EnemyLevels.Boss, BossEnemy);
         Enemies.Add(EnemyLevels.Medium, MediumEnemy);
         Enemies.Add(EnemyLevels.Hard, HardEnemy);
-        timeBetweenEnemies = Random.Range(1.0f, 5.0f);
+        timeBetweenEnemies = Random.Range(6.0f, 15.0f);
     }
     
     void Update()
